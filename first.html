@@ -1,0 +1,445 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 
+            HOMIFYS        
+        </title>
+        <link rel="icon" href="abc.jpeg">
+        <link rel="stylesheet" href="file_2.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+       /* Navigation Bar Styles */
+             body{
+              margin: 0;
+              background-image: url(autumn.jpeg);
+              font-weight: 300;
+             }
+     
+             .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            /* position: fixed; */
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 38px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            padding: 7px;
+            font-size: 17px;
+            border: none;
+            width: 65%;
+        }
+        .search-bar button {
+            padding: 7px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+
+        /* Main content styling */
+        /* .container {
+            padding: 20px;
+        } */
+        .products, .cart {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product, .cart-item {
+            background-color: #8f7443;
+            padding: 20px;
+            width: 30%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .product img, .cart-item img 
+        {
+      max-width: 300px;
+      max-height: 300px;
+        }
+        .product h3, .cart-item h3 {
+            margin: 15px 0;
+        }
+        .product input[type="number"] {
+            width: 50px;
+            margin: 10px 0;
+        }
+        .product button, .cart-item button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .product button:hover, .cart-item button:hover {
+            background-color: #218838;
+        }
+        .products
+        {
+         justify-content: center;  
+        }
+
+        /* @media screen and (max-width: 600px) {
+            .navbar a, .navbar .search-container {
+                float: none;
+                display: block;
+                text-align:center;
+                width: 300px;
+            }
+            .navbar input[type=text] {
+                width: 100%;
+                 margin-bottom: 10px; 
+            } 
+            .navbar
+            {
+              width:100%;
+      }} */
+        
+        #g
+        {
+            background-color: rgb(18, 65, 196);
+            width:100px;
+            padding:10px;
+            color:white;
+        }
+        #g:hover
+        {
+            background-color: green;
+            color:white;
+        }
+        #f
+        {
+          margin-top: 15px;
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+        body
+        {
+          background-color: rgb(238, 179, 123);
+        }
+        #v
+        {
+          width:100%;
+        }
+        #m
+        {
+          margin-right: 10px;
+        }
+        #w
+        {
+          margin-left: 10px;
+        }
+        #z
+        {
+          background-color: rgb(250, 131, 52);
+        }
+        #kk
+        {
+          width: 800px;
+       
+        }
+        .product-list {
+            display: wrap;
+            grid-template-columns: repeat( auto-fill,minmax(200px, 1fr));
+            gap: 60px;
+            padding: 20px;
+            margin:50px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            background-color: #d6ad77;
+        }
+        .product-item img 
+        {
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
+        .product-item h2 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .product-item p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .product-item button {
+            padding: 10px 45px;
+            background-color: #429e57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-item button:hover {
+            background-color: #106b24;
+        }
+        .img
+        {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        .y
+        {
+           text-align: left;
+            font-size: 60px;
+            text-decoration: bold;
+        }
+        footer
+        {
+            color: white;
+            background-color: black;
+            font-size: 20px;
+            padding:10px;
+        }
+        #er
+        {
+            color:#725d36
+        }
+        .c
+        {
+            color:#f8f7f4;
+           font-size: 20px;
+        }
+        #vd
+        {
+            font-size: 40px;
+            color: #26918b;
+        }
+        .gf
+        {
+            background-color: rgb(14, 5, 5);
+        }
+        .btn
+        {
+            display: inline;
+            text-decoration:solid;
+            font-size: 25px;
+        }
+        .sa
+        {
+            color:#fcf9f5;
+            background-color: gray;
+        }
+        #rat
+        {
+            color:#d6ad77;
+            text-decoration: bold;
+            font-weight: 300;
+        }
+        #jj
+        {
+            float :right;
+            margin-right: 50px;
+            color:#d6ad77;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+     </style> 
+      </head>
+    <body id="hdhd">
+   
+<center>
+    <div class="navbar">
+        <h3 id="rat"><b>HOMIFYS</b>&nbsp;&nbsp;&nbsp;</h3>
+        <a href="#productList"><i class="fa-sharp fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;PRODUCTS</a>
+        <a href="#productList"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;BEST-SELLERS</a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="search...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <a href="#cart"><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;My Cart</a>
+        <a href="#e"><i class="fa-solid fa-users-between-lines"></i>&nbsp;&nbsp;Registeration</a>
+        <a href="#z"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Contact</a>
+    </div>
+
+  </div>
+<br>
+
+
+
+      
+<img src="df.png" height="40%" width="50%">
+<u><H2 id="er" class="container-fluid "><b>IF YOU WANT TO ELEVATE YOUR SPACE , WE HAVE GOT YOUR BACK</b></H2></u></center>
+<hr><hr>
+<center><img src="qwerty.avif" width="100%" height="90%"</center>
+<br><br>
+
+<HR><HR>
+    <div class="gf">
+<marquee><b class="c">70% OFF !!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF !!!!SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!!</b></marquee>
+    </div>
+
+   <br> <a HREF="form.html"><button id="kk" CLASS="btn btn-success border-3"><b id="e">REGISTER NOW</b></button></a><br><br>
+    <div class="gf">
+        <marquee><b class="c">70% OFF !!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF !!!!SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!! SALE 70% OFF!!!!</b></marquee>
+    </div>
+       <div class="sa"><hr><hr>
+    <center><H2><b><i>"FIRST<BR> WE SHAPE<BR> OUR HOMES<BR>THEN <BR>OUR HOMES<BR>SHAPE US!"<BR><BR>---WINSTON CHURCHILL</i></b></H2></center>
+   <hr> <HR></div><hr>
+<h2 id="vd"><b><u><center>WHAT ARE YOU LOOKING 4 ?</center></u></b></h2>    
+<HR><HR>
+  <div class="products m-10" id="productList">
+  <div class="product">
+            <img class="img_size " src="def.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>$10.00</p>
+            <input type="number" id="quantity1" value="1" min="1">
+            <button onclick="addToCart('Product 1', 10, document.getElementById('quantity1').value)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img class="img_size" src="def3.webp" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>$20.00</p>
+            <input type="number" id="quantity2" value="1" min="1">
+            <button onclick="addToCart('Product 2', 20, document.getElementById('quantity2').value)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img class="img_size" src="def.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>$15.00</p>
+            <input type="number" id="quantity3" value="1" min="1">
+            <button onclick="addToCart('Product 3', 15, document.getElementById('quantity3').value)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img class="img_size" src="def3.webp" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>$10.00</p>
+            <input type="number" id="quantity4" value="1" min="1">
+            <button onclick="addToCart('Product 4', 10, document.getElementById('quantity1').value)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img class="img_size" src="def.jpg" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>$20.00</p>
+            <input type="number" id="quantity5" value="1" min="1">
+            <button onclick="addToCart('Product 5', 20, document.getElementById('quantity2').value)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img class="img_size" src="def3.webp" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>$13.00</p>
+            <input type="number" id="quantity6" value="1" min="1">
+            <button onclick="addToCart('Product 6', 13, document.getElementById('quantity3').value)">Add to Cart</button>
+        </div>
+    </div> 
+<hr><hr>
+
+<CENTER><h2 id="cart">MY CART</h2><hr><hr>
+<div class="cart" id="cartList">
+   <center> <p>Your cart is empty.</p></center>
+</div><br>
+<button class="btn btn-success" onclick="calculateTotal()">Calculate Cart Total</button>
+<h3 class="btn" id="totalAmount"><b>Total: $0.00</b></h3>
+</div></CENTER>
+
+<hr><div class="sa"><hr>
+<script>
+    var cart = [];
+
+    function addToCart(productName, price, quantity) 
+    {
+        // Add product to cart or update quantity if it exists
+        var existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) 
+        {
+            existingProduct.quantity += parseInt(quantity);
+        } 
+        else 
+        {
+            cart.push({ name: productName, price: price, quantity: parseInt(quantity) });
+        }
+        displayCart();
+    }
+
+    function removeFromCart(productName) 
+    {
+        // Remove product from cart
+        cart = cart.filter(item => item.name !== productName);
+        displayCart();
+    }
+
+ 
+    function displayCart() {
+            var cartList = document.getElementById('cartList');
+            cartList.innerHTML = '';
+            if (cart.length === 0) {
+                cartList.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cart.forEach(item => {
+                    cartList.innerHTML += `
+                        <div class="cart-item">
+                            <h3>${item.name}</h3>
+                            <p>$${item.price} x ${item.quantity}</p>
+                            <button onclick="removeFromCart('${item.name}')">Remove from Cart</button>
+                        </div>
+                    `;
+                });
+            }
+        }
+
+    function calculateTotal() {
+        var total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        document.getElementById('totalAmount').innerText = 'Total: $' + total.toFixed(2);
+    }
+
+    function searchProducts() {
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        var products = document.getElementsByClassName('product');
+
+        for (var i = 0; i < products.length; i++) {
+            var productName = products[i].getElementsByTagName('h3')[0].textContent.toLowerCase();
+            if (productName.includes(input)) {
+                products[i].style.display = '';
+            } else {
+                products[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+
+  <hr>
+            <CENTER><H2><B><I>"AS WE<BR>EVOLVE,<BR>OUR HOMES<BR>SHOULD TOO !"<BR><BR>---SUZANE TUCKER</I></B></H2></CENTER>
+               
+         <hr>   <hr></div><div id="z"><HR><HR>
+                  <center>
+      <A href="tel: 03324610255"><img src="mmm.png" height="11%" width="7%"></A>&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="https://wa.me/message/QIRNCXXXOF2HF1"><img src="xyz.png" height="10%" width="6%"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.facebook.com/homifys.store?mibextid=ZbWKh="><img src="aaa.png" height="9%" width="5%"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="https://www.instagram.com/homifys.store?igsh=dHl2cGd2M2hjbXpq"><img src="nnn.png" height="11%" width="7%"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </center>
+    <HR><HR></div></div>
+        <footer>
+            <p>© 2024 E-Commerce Website. All Rights Reserved.</p><br>
+        </footer>
+        
+    </center>  </body>
+    </html>
